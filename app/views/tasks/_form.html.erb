@@ -5,15 +5,11 @@
 
     <div id="error_explanation">
       <ul>
-        
-<% task.errors.full_tasks.each do |task| %>
-
+        <% task.errors.full_messages.each do |task| %>
           <li>
-<%= task %>
-</li>
-        
-<% end %>
-
+          <%= task %>
+          </li>
+        <% end %>
       </ul>
     </div>
   
@@ -21,14 +17,14 @@
 
 
   
-<%= f.label :status, 'タイトル' %>
+<%= f.label :status, 'タスク' %>
 
   
 <%= f.text_field :status %>
 
 
   
-<%= f.label :content, 'メッセージ' %>
+<%= f.label :content, 'ステータス' %>
 
   
 <%= f.text_field :content %>
